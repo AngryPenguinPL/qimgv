@@ -18,14 +18,14 @@
 
 Name:           qimgv
 Version:        0.7.1
-Release:        1.1
+Release:        1
 Summary:        Qt5 image viewer
 License:        GPL-3.0-only
 Group:          Productivity/Graphics/Viewers
 URL:            https://github.com/easymodo/qimgv
 Source0:        https://github.com/easymodo/qimgv/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRequires:  cmake
-BuildRequires:  gcc-c++
+#BuildRequires:  gcc-c++
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.9
