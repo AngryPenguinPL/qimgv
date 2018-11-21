@@ -45,8 +45,8 @@ Qt5 image viewer with webm support.
 %setup -q
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 
 %cmake
 make %{?_smp_mflags}
