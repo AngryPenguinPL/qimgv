@@ -33,6 +33,7 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.9
 BuildRequires:  pkgconfig(Qt5Widgets) >= 5.9
 BuildRequires:  pkgconfig(mpv) >= 1.22.0
+BuildRequires:  qt5-qtbase-devel
 
 %description
 Qt5 image viewer with webm support.
