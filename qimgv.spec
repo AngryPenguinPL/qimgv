@@ -28,6 +28,7 @@ BuildRequires:  cmake
 #BuildRequires:  gcc-c++
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
+BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.9
 BuildRequires:  pkgconfig(Qt5Widgets) >= 5.9
 BuildRequires:  pkgconfig(mpv) >= 1.22.0
