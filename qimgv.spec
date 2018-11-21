@@ -32,6 +32,9 @@ BuildRequires:  pkgconfig
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.9
 BuildRequires:  pkgconfig(Qt5Widgets) >= 5.9
+BuildRequires:	pkgconfig(Qt5QuickWidgets)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5Multimedia)
 BuildRequires:  pkgconfig(mpv) >= 1.22.0
 BuildRequires:  qt5-qtbase-devel
 
@@ -42,6 +45,9 @@ Qt5 image viewer with webm support.
 %setup -q
 
 %build
+export CC=gcc
+export CXX=g++
+
 %cmake
 make %{?_smp_mflags}
 
