@@ -56,7 +56,7 @@ Qt5 image viewer with webm support.
 make %{?_smp_mflags}
 
 %install
-%cmake_install
+%make_install
 
 %files
 %doc README.md
