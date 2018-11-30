@@ -1,0 +1,20 @@
+Index: sourcecontainers/documentinfo.cpp
+===================================================================
+--- sourcecontainers/documentinfo.cpp
++++ sourcecontainers/documentinfo.cpp	2018-11-30 03:52:34.753984945 +0100
+@@ -107,7 +107,12 @@
+         return;
+ 
+     QString path = filePath();
+-    const QImageReader& reader = (mExtension) ? QImageReader(path, mExtension) : QImageReader(path);
+-    if(reader.canRead())
+-        mOrientation = static_cast<int>(reader.transformation());
++    QImageReader *reader = nullptr;
++    if(mExtension)
++        reader = new QImageReader(path, mExtension);
++    else
++        reader = new QImageReader(path);
++    if(reader->canRead())
++        mOrientation = static_cast<int>(reader->transformation());
++    delete reader;
+ }
