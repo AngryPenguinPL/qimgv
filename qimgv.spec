@@ -24,6 +24,9 @@ License:        GPL-3.0-only
 Group:          Productivity/Graphics/Viewers
 URL:            https://github.com/easymodo/qimgv
 Source0:        https://github.com/easymodo/qimgv/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+# Add patch to fix build issue https://github.com/easymodo/qimgv/issues/63
+# https://github.com/easymodo/qimgv/commit/33cccbe76736bdb6245ba4eb6d7de50473d7b3d1
+Patch0:         qimgv0.7.1-fix-build-QImageReader-del-const.patch
 BuildRequires:  cmake
 BuildRequires:  qmake5
 #BuildRequires:  gcc-c++
@@ -43,6 +46,7 @@ Qt5 image viewer with webm support.
 
 %prep
 %setup -q
+%autopatch -p0
 
 %build
 #export CC=gcc
