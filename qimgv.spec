@@ -52,11 +52,11 @@ Qt5 image viewer with webm support.
 #export CC=gcc
 #export CXX=g++
 
-%cmake
-make %{?_smp_mflags}
+%cmake -G Ninja
+%ninja_build
 
 %install
-%make_install
+%ninja_install -C build
 
 %files
 %doc README.md
