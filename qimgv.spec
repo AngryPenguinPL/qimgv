@@ -40,6 +40,7 @@ BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Multimedia)
 BuildRequires:  pkgconfig(mpv) >= 1.22.0
 BuildRequires:  qt5-qtbase-devel
+BuildRequires:  ninja
 
 %description
 Qt5 image viewer with webm support.
@@ -52,11 +53,11 @@ Qt5 image viewer with webm support.
 #export CC=gcc
 #export CXX=g++
 
-%cmake
-make %{?_smp_mflags}
+%cmake -G Ninja
+%ninja_build
 
 %install
-%make_install
+%ninja_install -C build
 
 %files
 %doc README.md
