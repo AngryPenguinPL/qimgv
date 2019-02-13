@@ -32,9 +32,7 @@ Qt5 image viewer also with video support.
 
 %build
 
-%cmake -G Ninja
-      --DVIDEO_SUPPORT=ON \
-      --DKDE_SUPPORT=ON
+%cmake -G Ninja -DVIDEO_SUPPORT=ON
 %ninja_build
 
 %install
