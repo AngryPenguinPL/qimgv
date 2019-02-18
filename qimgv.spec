@@ -14,14 +14,16 @@ BuildRequires:  qmake5
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
 BuildRequires:	pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.9
-BuildRequires:  pkgconfig(Qt5Widgets) >= 5.9
+BuildRequires:  pkgconfig(Qt5Concurrent)
+BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5QuickWidgets)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Multimedia)
-BuildRequires:  pkgconfig(mpv) >= 1.22.0
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  ninja
+# Optional, mpv needed for video support and KF5WindowSystem for better KDE support.
+BuildRequires:  pkgconfig(mpv)
+BuildRequiresL  cmake(KF5WindowSystem)
 
 %description
 Qt5 image viewer also with video support.
