@@ -23,7 +23,7 @@ BuildRequires:  qt5-qtbase-devel
 BuildRequires:  ninja
 # Optional, mpv needed for video support and KF5WindowSystem for better KDE support.
 BuildRequires:  pkgconfig(mpv)
-BuildRequiresL  cmake(KF5WindowSystem)
+BuildRequires:  cmake(KF5WindowSystem)
 
 %description
 Qt5 image viewer also with video support.
